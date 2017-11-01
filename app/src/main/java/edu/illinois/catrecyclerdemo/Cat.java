@@ -13,7 +13,7 @@ public class Cat {
             "  \"location\": \"Venice, CA\",         \n" +
             "  \"imageUrl\": \"https://img.buzzfeed.com/buzzfeed-static/static/2015-03/3/16/enhanced/webdr09/enhanced-7711-1425417143-1.jpg?downsize=715:*&output-format=auto&output-quality=auto\"},\n" +
             "{ \"name\": \"Fifi\", \n" +
-            "  \"location\": \"Venice, CA\",         \n" +
+            "  \"location\": \"Bozeman, MT\",         \n" +
             "  \"imageUrl\": \"https://www.petfinder.com/wp-content/uploads/2013/09/cat-black-superstitious-fcs-cat-myths-162286659.jpg\"},\n" +
             "{ \"name\": \"Fluffles\", \n" +
             "  \"location\": \"Chicago, IL\"},\n" +

@@ -34,6 +34,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
     public int getItemViewType(int position) {
         Cat cat = cats.get(position);
         return (cat.getImageUrl() != null) ? R.layout.cat_with_image : R.layout.cat;
+        // return R.layout.cat_with_image;      // if you want to hard-code the ViewType
     }
 
     @Override
