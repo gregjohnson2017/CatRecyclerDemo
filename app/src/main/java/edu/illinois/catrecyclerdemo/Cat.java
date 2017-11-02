@@ -1,10 +1,13 @@
 package edu.illinois.catrecyclerdemo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by zilles on 10/31/17.
  */
 
-public class Cat {
+public class Cat implements Parcelable {
     public static final String CATS_JSON = "[\n" +
             "{ \"name\": \"Speedy\", \n" +
             "  \"location\": \"Austin, TX\",         \n" +
@@ -64,4 +67,41 @@ public class Cat {
         return name + " (" + location + ") " + ((imageUrl != null) ? (" [" + imageUrl + "]") : "");
     }
 
+    
+    // ALL OF THE CODE THAT FOLLOWS WAS AUTOMATICALLY GENERATED
+    // by an Android Studio plug-in:
+    //     https://plugins.jetbrains.com/plugin/7332-android-parcelable-code-generator
+    //
+    // See the following URL for its installation and use, except the plug-ins option is under preferences.
+    //     http://corochann.com/fast-easy-parcelable-implementation-with-android-studio-parcelable-plugin-641.html
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.name);
+        dest.writeString(this.location);
+        dest.writeString(this.imageUrl);
+    }
+
+    protected Cat(Parcel in) {
+        this.name = in.readString();
+        this.location = in.readString();
+        this.imageUrl = in.readString();
+    }
+
+    public static final Parcelable.Creator<Cat> CREATOR = new Parcelable.Creator<Cat>() {
+        @Override
+        public Cat createFromParcel(Parcel source) {
+            return new Cat(source);
+        }
+
+        @Override
+        public Cat[] newArray(int size) {
+            return new Cat[size];
+        }
+    };
 }
